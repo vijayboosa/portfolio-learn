@@ -10,152 +10,15 @@
       href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap"
       rel="stylesheet"
     />
-    <style>
-      * {
-        font-family: "Satoshi", sans-serif;
-        margin: 0;
-        padding: 0;
-      }
+    <script src="https://cdn.tailwindcss.com"></script>
 
-      a {
-        text-decoration: none;
-        color: #fcfcfc;
-      }
-
-      body {
-        background-image: linear-gradient(
-          45deg,
-          hwb(240 75% 20%) 0%,
-          hsl(272deg 11% 77%) 24%,
-          hsl(310deg 11% 78%) 61%,
-          hsl(335deg 16% 79%) 76%,
-          hsl(352deg 20% 80%) 85%,
-          hsl(6deg 23% 80%) 90%,
-          hsl(17deg 26% 80%) 94%,
-          hsl(27deg 25% 79%) 97%,
-          hsl(38deg 22% 78%) 99%,
-          hsl(57deg 16% 78%) 100%
-        );
-        min-height: 100vh;
-      }
-
-      .item {
-        min-width: 100px;
-        max-width: 100px;
-        height: 100px;
-      }
-
-      nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        padding-block: 30px;
-        margin: 0 50px;
-      }
-
-      #logo {
-        font-size: 2rem;
-      }
-
-      nav > ul {
-        display: flex;
-        gap: 10px;
-        font-size: 1.3rem;
-        font-weight: 700;
-      }
-
-      nav > ul > li {
-        list-style: none;
-        padding: 10px;
-        border-radius: 5px 10px;
-        transition: background-color 0.5s;
-      }
-
-      nav ul li:hover {
-        background-color: rgba(255, 255, 255, 0.3);
-      }
-
-      #home {
-        margin-top: 50px;
-        text-align: center;
-        color: white;
-      }
-
-      #home > .profile-image {
-        border-radius: 50%;
-        width: 200px;
-        height: 200px;
-        overflow: hidden;
-        margin-inline: auto;
-      }
-
-      .profile-image > img {
-        border-radius: 50%;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.5s;
-      }
-
-      .profile-image > img:hover {
-        transform: scale(1.1);
-      }
-
-      #home > p {
-        min-width: 300px;
-        max-width: 800px;
-        font-size: 1.6rem;
-        padding: 10px;
-        margin-inline: auto;
-        font-weight: 500;
-      }
-
-      #project {
-        margin: 150px;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-      }
-
-      .project-card {
-        border-radius: 20px;
-        overflow: hidden;
-        padding: 20px;
-
-        background: rgba(255, 255, 255, 0.25);
-        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-        backdrop-filter: blur(1px);
-        -webkit-backdrop-filter: blur(1px);
-        border: 1px solid rgba(255, 255, 255, 0.18);
-      }
-
-      .project-card > img {
-        width: 100%;
-        border-radius: 20px;
-      }
-
-      .project-card .project-title {
-        font-size: 1.5rem;
-        font-weight: 700;
-        margin-block: 10px;
-        color: #fefefe;
-        width: fit-content;
-        border-bottom: 6px solid #fefefe;
-      }
-
-      .project-card .project-description {
-        font-size: 1.2rem;
-        font-weight: lighter;
-        color: #fefefe;
-      }
-    </style>
+    
   </head>
   <body>
-    <nav>
-      <h1 id="logo">Arjun</h1>
+    <nav class="flex justify-between p-4">
+      <h1 class="text-3xl font-bold">Arjun</h1>
 
-      <ul>
+      <ul class="flex gap-4">
         <li>
           <a href="index.html">Home</a>
         </li>
@@ -169,82 +32,92 @@
     </nav>
 
     <main>
-      <section id="home">
-        <div class="profile-image">
+      <section class="m-20">
+        <div class="mx-auto my-12 w-72 shadow-none outline rounded-full overflow-hidden hover:outline-4	hover:shadow-2xl  hover:shadow-indigo-200">
           <img
             src="https://content.wepik.com/statics/21209533/preview-page0.jpg"
             alt="profile-image"
+            class="hover:scale-110"
           />
         </div>
 
-        <p>
+        <p class="text-2xl  mx-20 text-center text-gray-700">
           Hi, I am Arjun Kumar. I am a web developer. I love to code and create
           new things. I am a full stack developer. I have experience in HTML,
           CSS, JavaScript, React, Node, Express, MongoDB, MySQL, etc.
         </p>
       </section>
 
-      <section id="project">
-        <div class="project-card">
+      <section >
+        <div class="flex h-64 gap-4 border p-4 rounded-xl w-4/6 mx-auto my-12 shadow-lg">
           <img
-            src="https://colorscreen.io/data/image/posts/gradient-generator.jpeg"
+            src="https://assets.roadmap.sh/guest/movie-reservation-system-5823e.png "
             alt="project-image"
+            class="w-1/4 object-cover rounded-lg border"
           />
 
-          <div class="project-info">
-            <h2 class="project-title">Gradient Generator</h2>
+          <div >
+            <h2 class="text-2xl font-bold mb-4 border-b-4 border-transparent hover:border-indigo-400  w-fit"
+            >Movie Reservation System</h2>
 
-            <p class="project-description">
+            <p class="text-gray-700 text-lg">
               This is a project that I have created. It is a gradient generator.
               You can generate different gradients using this tool.
             </p>
           </div>
         </div>
-        <div class="project-card">
+        <div class="flex h-64 gap-4 border p-4 rounded-xl w-4/6 mx-auto my-12 shadow-lg">
           <img
-            src="https://colorscreen.io/data/image/posts/gradient-generator.jpeg"
+            src="https://assets.roadmap.sh/guest/movie-reservation-system-5823e.png "
             alt="project-image"
+            class="w-1/4 object-cover rounded-lg border"
           />
 
-          <div class="project-info">
-            <h2 class="project-title">Gradient Generator</h2>
+          <div >
+            <h2 class="text-2xl font-bold mb-4 border-b-4 border-transparent hover:border-indigo-400  w-fit"
+            >Movie Reservation System</h2>
 
-            <p class="project-description">
+            <p class="text-gray-700 text-lg">
               This is a project that I have created. It is a gradient generator.
               You can generate different gradients using this tool.
             </p>
           </div>
         </div>
-        <div class="project-card">
+        <div class="flex h-64 gap-4 border p-4 rounded-xl w-4/6 mx-auto my-12 shadow-lg">
           <img
-            src="https://colorscreen.io/data/image/posts/gradient-generator.jpeg"
+            src="https://assets.roadmap.sh/guest/movie-reservation-system-5823e.png "
             alt="project-image"
+            class="w-1/4 object-cover rounded-lg border"
           />
 
-          <div class="project-info">
-            <h2 class="project-title">Gradient Generator</h2>
+          <div >
+            <h2 class="text-2xl font-bold mb-4 border-b-4 border-transparent hover:border-indigo-400  w-fit"
+            >Movie Reservation System</h2>
 
-            <p class="project-description">
+            <p class="text-gray-700 text-lg">
               This is a project that I have created. It is a gradient generator.
               You can generate different gradients using this tool.
             </p>
           </div>
         </div>
-        <div class="project-card">
+        <div class="flex h-64 gap-4 border p-4 rounded-xl w-4/6 mx-auto my-12 shadow-lg">
           <img
-            src="https://colorscreen.io/data/image/posts/gradient-generator.jpeg"
+            src="https://assets.roadmap.sh/guest/movie-reservation-system-5823e.png "
             alt="project-image"
+            class="w-1/4 object-cover rounded-lg border"
           />
 
-          <div class="project-info">
-            <h2 class="project-title">Gradient Generator</h2>
+          <div >
+            <h2 class="text-2xl font-bold mb-4 border-b-4 border-transparent hover:border-indigo-400  w-fit"
+            >Movie Reservation System</h2>
 
-            <p class="project-description">
+            <p class="text-gray-700 text-lg">
               This is a project that I have created. It is a gradient generator.
               You can generate different gradients using this tool.
             </p>
           </div>
         </div>
+
       </section>
     </main>
   </body>
