@@ -36,11 +36,21 @@
 
     <main>
       <section class="m-20">
-        <div class="mx-auto my-12 w-72 shadow-none outline rounded-full overflow-hidden hover:outline-4	hover:shadow-2xl  hover:shadow-indigo-200">
+        <div class="group mx-auto my-12 w-72 shadow-none rounded-full hover:shadow-2xl  hover:shadow-indigo-200 relative">
+          <span class="absolute top-0 right-8 text-3xl border inline-block rounded-full p-2">
+            <picture class="hidden group-hover:block">
+              <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f600/512.webp" type="image/webp">
+              <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f600/512.gif" alt="😀" width="32" height="32">
+            </picture>
+            <picture class="group-hover:hidden">
+              <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f44b_1f3fc/512.webp" type="image/webp">
+              <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f44b_1f3fc/512.gif" alt="👋" width="32" height="32">
+            </picture>
+          </span>
           <img
             src="https://content.wepik.com/statics/21209533/preview-page0.jpg"
             alt="profile-image"
-            class="hover:scale-110"
+            class=" rounded-full outline"
           />
         </div>
 
